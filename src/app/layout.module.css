@@ -1,0 +1,20 @@
+.layout {
+  display: grid;
+  min-height: 100vh;
+  grid-template: "header" auto "main" 1fr "footer" auto / 1fr;
+}
+
+.layout__header {
+  padding: 20px;
+  border-bottom: 1px solid black;
+  grid-area: header;
+}
+.layout__main {
+  grid-area: main;
+}
+.layout__footer {
+  padding: 20px;
+  background-color: black;
+  color: white;
+  grid-area: footer;
+}
