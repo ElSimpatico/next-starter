@@ -1,0 +1,13 @@
+{
+    "Products": {
+        "title": "Product page",
+        "detailLink": "See the product {product}"
+    },
+    "ProductDetail": {
+        "title": "Product detail page",
+        "subtitle": "This is the product {product}"
+    },
+    "Footer": {
+        "author": "Developed by {name}"
+    }
+}
