@@ -1,5 +1,4 @@
 import { getTranslations } from 'next-intl/server';
-import { use } from "react";
 
 import { CommonServerProps } from "@/types/CommonProps";
 
