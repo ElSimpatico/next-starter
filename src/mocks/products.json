@@ -1,0 +1,142 @@
+[
+  {
+    "id": "b78f2f78-407b-4d5d-8577-58298fabfa48",
+    "name": "Práctico Acero Mesa",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/b78f2f78-407b-4d5d-8577-58298fabfa48/600/400",
+    "price": 107.15
+  },
+  {
+    "id": "ebd236b3-acd0-4b9b-8437-d764cb7dd088",
+    "name": "Fantástico Acero Lámpara",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/ebd236b3-acd0-4b9b-8437-d764cb7dd088/600/400",
+    "price": 167.19
+  },
+  {
+    "id": "9fbaf155-66a0-491f-b89d-8f8d0c504f57",
+    "name": "Práctico Algodón Silla",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/9fbaf155-66a0-491f-b89d-8f8d0c504f57/600/400",
+    "price": 197.11
+  },
+  {
+    "id": "e112e115-be65-4a8d-a96c-e7a018888537",
+    "name": "Rústico Granito Lámpara",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/e112e115-be65-4a8d-a96c-e7a018888537/600/400",
+    "price": 92.24
+  },
+  {
+    "id": "e3bd7962-8130-4ca0-bf94-4a6b584fbfff",
+    "name": "Ergonómico Algodón Botella",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/e3bd7962-8130-4ca0-bf94-4a6b584fbfff/600/400",
+    "price": 39.71
+  },
+  {
+    "id": "a3a1602a-ff67-4d1d-8b18-c688dbd8cbdc",
+    "name": "Rústico Plástico Teclado",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/a3a1602a-ff67-4d1d-8b18-c688dbd8cbdc/600/400",
+    "price": 165.9
+  },
+  {
+    "id": "764fa88b-76fd-4fb2-a569-f83a54e52867",
+    "name": "Práctico Granito Mesa",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/764fa88b-76fd-4fb2-a569-f83a54e52867/600/400",
+    "price": 355.28
+  },
+  {
+    "id": "e8c29eda-b2fc-466e-8109-e1fb0e12ed40",
+    "name": "Increíble Acero Lámpara",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/e8c29eda-b2fc-466e-8109-e1fb0e12ed40/600/400",
+    "price": 138.05
+  },
+  {
+    "id": "71a29ebf-ab82-4339-b16d-b3a6f4fba22f",
+    "name": "Ergonómico Granito Silla",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/71a29ebf-ab82-4339-b16d-b3a6f4fba22f/600/400",
+    "price": 251.23
+  },
+  {
+    "id": "46d0301c-d0c9-4a0e-9e29-a5394573945d",
+    "name": "Fantástico Acero Botella",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/46d0301c-d0c9-4a0e-9e29-a5394573945d/600/400",
+    "price": 77.55
+  },
+  {
+    "id": "0f1bce52-068a-4148-a87d-97be92fc41e0",
+    "name": "Ergonómico Algodón Botella",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/0f1bce52-068a-4148-a87d-97be92fc41e0/600/400",
+    "price": 183.47
+  },
+  {
+    "id": "07832a97-b9f7-4243-a4f4-3146555b420b",
+    "name": "Fantástico Granito Teléfono",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/07832a97-b9f7-4243-a4f4-3146555b420b/600/400",
+    "price": 175.38
+  },
+  {
+    "id": "ea4026b5-0870-4b92-8615-f920182bb503",
+    "name": "Práctico Madera Teléfono",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/ea4026b5-0870-4b92-8615-f920182bb503/600/400",
+    "price": 351.01
+  },
+  {
+    "id": "1db1b433-707c-4504-a9c1-16f3d644366c",
+    "name": "Increíble Acero Mesa",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/1db1b433-707c-4504-a9c1-16f3d644366c/600/400",
+    "price": 486.96
+  },
+  {
+    "id": "c135bfc5-a555-412b-add4-767a84c8a031",
+    "name": "Rústico Plástico Mesa",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/c135bfc5-a555-412b-add4-767a84c8a031/600/400",
+    "price": 496.6
+  },
+  {
+    "id": "1ccb4be1-81ae-4bdb-b1bf-edf04d64c223",
+    "name": "Increíble Madera Lámpara",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/1ccb4be1-81ae-4bdb-b1bf-edf04d64c223/600/400",
+    "price": 361.43
+  },
+  {
+    "id": "f286f328-62fa-4c25-bdd3-074de7e38222",
+    "name": "Fantástico Algodón Lámpara",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/f286f328-62fa-4c25-bdd3-074de7e38222/600/400",
+    "price": 74.92
+  },
+  {
+    "id": "bce0075a-7dcc-4851-a667-22ca21eb0e06",
+    "name": "Práctico Acero Botella",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/bce0075a-7dcc-4851-a667-22ca21eb0e06/600/400",
+    "price": 387.89
+  },
+  {
+    "id": "d6242731-7e85-41e5-b9fc-43844a41bc42",
+    "name": "Increíble Granito Teléfono",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/d6242731-7e85-41e5-b9fc-43844a41bc42/600/400",
+    "price": 80.79
+  },
+  {
+    "id": "4b8b1c1a-8dfb-4fd4-af9f-de6214224173",
+    "name": "Increíble Algodón Teclado",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "https://picsum.photos/seed/4b8b1c1a-8dfb-4fd4-af9f-de6214224173/600/400",
+    "price": 162.62
+  }
+]

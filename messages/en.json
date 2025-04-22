@@ -1,13 +1,18 @@
 {
-    "Products": {
-        "title": "Product page",
-        "detailLink": "See the product {product}"
-    },
-    "ProductDetail": {
-        "title": "Product detail page",
-        "subtitle": "This is the product {product}"
-    },
-    "Footer": {
-        "author": "Developed by {name}"
-    }
+  "Products": {
+    "title": "Product page",
+    "detailLink": "See the product {product}",
+    "detailImage": "Image of the product {product}"
+  },
+  "ProductDetail": {
+    "title": "Product detail page",
+    "subtitle": "This is the product {product}"
+  },
+  "Footer": {
+    "author": "Developed by {name}"
+  },
+  "Languages": {
+    "en": "English",
+    "es": "Spanish"
+  }
 }

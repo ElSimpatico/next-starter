@@ -7,8 +7,10 @@ import { CommonServerProps } from "@/types/CommonProps";
 import { hasLocale } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
-import { NextIntlClientProvider } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { NextIntlClientProvider } from "next-intl";
+import { getTranslations } from "next-intl/server";
+
+import LanguageNav from "@/ui/components/language-nav/LanguageNav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,36 +29,37 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-  params
+  params,
 }: Readonly<CommonServerProps>) {
-  const { locale  } = await params ?? {};
+  const { locale } = (await params) ?? {};
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
-  const t = await getTranslations('Footer');
+  const t = await getTranslations("Footer");
 
   return (
     <html lang={locale as string}>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${styles.layout}`}>
-        <header className={styles.layout__header}>
-          <Image
-            src="/next.svg"
-            alt="Next.js logo"
-            width={180}
-            height={38}
-            priority
-          />
-        </header>
-        <main className={styles.layout__main}>
-          <NextIntlClientProvider>
-            {children}
-          </NextIntlClientProvider>
-        </main>
-        <footer className={styles.layout__footer}>
-          <p>{t("author", { name: "Aarón Velasco López" })}</p>
-        </footer>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${styles.layout}`}
+      >
+        <NextIntlClientProvider>
+          <header className={styles.layout__header}>
+            <Image
+              src="/next.svg"
+              alt="Next.js logo"
+              width={180}
+              height={38}
+              priority
+            />
+            <LanguageNav />
+          </header>
+          <main className={styles.layout__main}>{children}</main>
+          <footer className={styles.layout__footer}>
+            <p>{t("author", { name: "Aarón Velasco López" })}</p>
+          </footer>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -35,6 +35,40 @@ a {
   text-decoration: none;
 }
 
+.languages {
+  display: flex;
+}
+
+.languages__link:not(:last-child) {
+  margin: 0 16px 0 0;
+}
+
+.languages__link.active {
+  border-bottom: 1px solid black;
+}
+
+.products {
+  margin: 24px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.products__card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.products__cardImage {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

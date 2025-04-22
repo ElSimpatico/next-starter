@@ -1,13 +1,18 @@
 {
-    "Products": {
-        "title": "Página de productos",
-        "detailLink": "Ver el producto {product}"
-    },
-    "ProductDetail": {
-        "title": "Página de detalle de producto",
-        "subtitle": "Este es el producto {product}"
-    },
-    "Footer": {
-        "author": "Desarrollado por {name}"
-    }
+  "Products": {
+    "title": "Página de productos",
+    "detailLink": "Ver el producto {product}",
+    "detailImage": "Imagen del product {product}"
+  },
+  "ProductDetail": {
+    "title": "Página de detalle de producto",
+    "subtitle": "Este es el producto {product}"
+  },
+  "Footer": {
+    "author": "Desarrollado por {name}"
+  },
+  "Languages": {
+    "en": "Inglés",
+    "es": "Español"
+  }
 }
