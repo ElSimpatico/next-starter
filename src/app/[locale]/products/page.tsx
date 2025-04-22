@@ -7,7 +7,7 @@ import { Product } from "@/types/Products";
 
 async function getProducts(): Promise<Product[]> {
   return new Promise((resolve) =>
-    setTimeout(() => resolve(MockProducts), 1000)
+    setTimeout(() => resolve(MockProducts), 1000),
   );
 }
 
