@@ -1,5 +1,5 @@
 export enum Routes {
-    ROOT = "/",
-    PRODUCTS = "/products",
-    PRODUCT_DETAIL = "/products/[id]"
+  ROOT = "/",
+  PRODUCTS = "/products",
+  PRODUCT_DETAIL = "/products/[id]",
 }

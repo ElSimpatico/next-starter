@@ -26,7 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${styles.layout}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${styles.layout}`}
+      >
         <header className={styles.layout__header}>
           <Image
             src="/next.svg"
@@ -36,9 +38,7 @@ export default function RootLayout({
             priority
           />
         </header>
-        <main className={styles.layout__main}>
-          {children}
-        </main>
+        <main className={styles.layout__main}>{children}</main>
         <footer className={styles.layout__footer}>
           <p>Desarrollado por Aaron Velasco Lopez</p>
         </footer>
