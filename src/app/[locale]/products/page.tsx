@@ -1,14 +1,26 @@
-import MockProducts from "@/mocks/products.json";
-
 import { getTranslations } from "next-intl/server";
 
 import ProductCard from "./_components/product-card/ProductCard";
 import { Product } from "@/types/Products";
 
+import { DummyAPI } from "@/lib/api";
+
 async function getProducts(): Promise<Product[]> {
-  return new Promise((resolve) =>
-    setTimeout(() => resolve(MockProducts), 1000),
-  );
+  try {
+    const dummyProducts = await DummyAPI.getProducts();
+    return (dummyProducts.products ?? []).map(
+      (dummyProduct) =>
+        ({
+          id: dummyProduct?.id,
+          name: dummyProduct?.title,
+          description: dummyProduct?.description,
+          imageUrl: dummyProduct?.thumbnail,
+          price: dummyProduct?.price,
+        }) as Product
+    );
+  } catch (err) {
+    return [];
+  }
 }
 
 export default async function Products() {
