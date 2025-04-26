@@ -2,7 +2,7 @@ import { HTTPClient } from "@/lib/api/core";
 
 import { BASE_URL, Endpoints } from "./constants";
 import { resolveEndpoint } from "../core/utils";
-import { DummyProductsResponse } from "./types";
+import { DummyProductsResponse, DummySingleProductResponse } from "./types";
 
 class DummyAPI {
   private http: HTTPClient;
@@ -15,7 +15,7 @@ class DummyAPI {
     return this.http.get(Endpoints.PRODUCTS, {});
   }
 
-  async getProduct<T>(id: string): Promise<T> {
+  async getProduct(id: string): Promise<DummySingleProductResponse> {
     const endpoint = resolveEndpoint(Endpoints.PRODUCT_DETAIL, { id });
     return this.http.get(endpoint, {});
   }

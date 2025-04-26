@@ -69,6 +69,30 @@ a {
   border-radius: 12px;
 }
 
+.productDetail {
+  display: grid;
+  grid-template:
+    "titlePage titlePage" auto
+    "images info" auto
+    "images dimensions" auto
+    "images meta" auto
+    "reviews reviews" auto
+    "policies policies" auto / 0.6fr 0.4fr;
+  gap: 24px;
+}
+.productDetail__titlePage {
+  grid-area: titlePage;
+}
+.productDetail__images {
+  grid-area: images;
+}
+.productDetail__info {
+  grid-area: info;
+}
+.productDetail__dimensions {
+  grid-area: dimensions;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

@@ -1,30 +1,13 @@
 import { getTranslations } from "next-intl/server";
 
 import ProductCard from "./_components/product-card/ProductCard";
-import { Product } from "@/types/Products";
 
-import { DummyAPI } from "@/lib/api";
-
-async function getProducts(): Promise<Product[]> {
-  try {
-    const dummyProducts = await DummyAPI.getProducts();
-    return (dummyProducts.products ?? []).map(
-      (dummyProduct) =>
-        ({
-          id: dummyProduct?.id,
-          name: dummyProduct?.title,
-          description: dummyProduct?.description,
-          imageUrl: dummyProduct?.thumbnail,
-          price: dummyProduct?.price,
-        }) as Product
-    );
-  } catch (err) {
-    return [];
-  }
-}
+import { getProducts } from "./_utils/fetch";
+import { fakeWaiter } from "@/lib/utils/fake";
 
 export default async function Products() {
   const t = await getTranslations("Products");
+  await fakeWaiter(1);
   const products = await getProducts();
 
   return (
@@ -44,3 +27,22 @@ export default async function Products() {
     </div>
   );
 }
+
+// import { Suspense } from "react";
+// import { getTranslations } from "next-intl/server";
+// import { ProductList } from "./_components/product-list/ProductList";
+// import ProductListSkeleton from "./_components/product-list/ProductListSkeleton";
+
+// export default async function Products() {
+//   const t = await getTranslations("Products");
+
+//   return (
+//     <div>
+//       <h1>{t("title")}</h1>
+
+//       <Suspense fallback={<ProductListSkeleton />}>
+//         <ProductList t={t} />
+//       </Suspense>
+//     </div>
+//   );
+// }
