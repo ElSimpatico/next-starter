@@ -15,9 +15,9 @@ export class HTTPClient implements IHTTPClient {
     options: HTTPClientOptions
   ): Promise<T> {
     const url = `${this.baseUrl}${endpoint}`;
-    console.log(url);
     const response = await fetch(url, {
       method,
+      ...options,
       headers: {
         ...this.options.headers,
         ...options.headers,

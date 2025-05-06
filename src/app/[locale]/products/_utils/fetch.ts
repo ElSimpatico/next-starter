@@ -1,5 +1,4 @@
 import { DummyAPI } from "@/lib/api";
-import { Params } from "@/types/CommonProps";
 import { Product } from "@/types/Products";
 
 export async function getProducts(): Promise<Product[]> {
@@ -20,10 +19,9 @@ export async function getProducts(): Promise<Product[]> {
   }
 }
 
-export async function getProduct(params: Promise<Params>) {
-  const { id } = await params;
+export async function getProduct(id: string) {
   try {
-    const productResponse = await DummyAPI.getProduct(id as string);
+    const productResponse = await DummyAPI.getProduct(id);
     return productResponse;
   } catch (err) {
     console.error(err);

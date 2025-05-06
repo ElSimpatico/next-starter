@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
+import { notFound } from "next/navigation";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { getMessages, getTranslations } from "next-intl/server";
+
+import { routing } from "@/i18n/routing";
+import { CommonServerLayout } from "@/types/CommonProps";
+
 import styles from "./layout.module.css";
 import "./globals.css";
-import { CommonServerProps } from "@/types/CommonProps";
-import { hasLocale } from "next-intl";
-import { routing } from "@/i18n/routing";
-import { notFound } from "next/navigation";
-import { NextIntlClientProvider } from "next-intl";
-import { getTranslations } from "next-intl/server";
 
-import LanguageNav from "@/ui/components/language-nav/LanguageNav";
+import { LanguageNav } from "@/ui/components";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,12 +31,14 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
   params,
-}: Readonly<CommonServerProps>) {
+}: CommonServerLayout) {
   const { locale } = (await params) ?? {};
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+
+  const messages = await getMessages();
 
   const t = await getTranslations("Footer");
 
@@ -44,7 +47,7 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${styles.layout}`}
       >
-        <NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <header className={styles.layout__header}>
             <Image
               src="/next.svg"

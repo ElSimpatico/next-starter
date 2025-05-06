@@ -1,14 +1,28 @@
 import { getTranslations } from "next-intl/server";
 
-import { CommonServerProps } from "@/types/CommonProps";
+import { CommonServerPage } from "@/types/CommonProps";
 
 import { getProduct } from "../_utils/fetch";
 import { fakeWaiter } from "@/lib/utils/fake";
 
-export default async function Product({ params }: CommonServerProps) {
-  await fakeWaiter(1);
-  const productPromise = getProduct(params!);
-  const t = await getTranslations("ProductDetail");
+// export const dynamic = "force-static";
+
+// export async function generateStaticParams() {
+//   return [
+//     { locale: "es", id: "1" },
+//     { locale: "es", id: "2" },
+//     { locale: "es", id: "3" },
+//     { locale: "en", id: "1" },
+//     { locale: "en", id: "2" },
+//     { locale: "en", id: "3" },
+//   ];
+// }
+
+export default async function Product({ params }: CommonServerPage) {
+  // await fakeWaiter(1);
+  const { id, locale } = (await params) ?? {};
+  const productPromise = getProduct(id);
+  const t = await getTranslations({ locale, namespace: "ProductDetail" });
 
   const product = await productPromise;
 
@@ -56,13 +70,29 @@ export default async function Product({ params }: CommonServerProps) {
 // import { Suspense } from "react";
 // import { getTranslations } from "next-intl/server";
 
-// import { CommonServerProps } from "@/types/CommonProps";
-// import { ProductGallery } from "../_components/product-gallery/ProductGallery";
-// import { ProductInfo } from "../_components/product-info/ProductInfo";
-// import { ProductDimensions } from "../_components/product-dimensions/ProductDimensions";
+// import { CommonServerPage } from "@/types/CommonProps";
+// import {
+//   ProductGallery,
+//   ProductInfo,
+//   ProductDimensions,
+// } from "@/app/[locale]/products/_components";
 
-// export default async function Product({ params }: CommonServerProps) {
-//   const t = await getTranslations("ProductDetail");
+// // export const dynamic = "force-static";
+
+// // export async function generateStaticParams() {
+// //   return [
+// //     { locale: "es", id: "1" },
+// //     { locale: "en", id: "1" },
+// //     { locale: "es", id: "2" },
+// //     { locale: "en", id: "2" },
+// //     { locale: "es", id: "3" },
+// //     { locale: "en", id: "3" },
+// //   ];
+// // }
+
+// export default async function Product({ params }: CommonServerPage) {
+//   const { locale } = (await params) ?? {};
+//   const t = await getTranslations({ locale, namespace: "ProductDetail" });
 
 //   return (
 //     <div className="productDetail">

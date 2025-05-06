@@ -1,9 +1,10 @@
+import { use } from "react";
+import { ProductCard } from "@/app/[locale]/products/_components";
+import { getProducts } from "@/app/[locale]/products/_utils";
 import { CommonServerProps } from "@/types/CommonProps";
-import ProductCard from "../product-card/ProductCard";
-import { getProducts } from "../../_utils/fetch";
 
-export async function ProductList({ t }: CommonServerProps) {
-  const products = await getProducts();
+export default function ProductList({ t }: CommonServerProps) {
+  const products = use(getProducts());
 
   return (
     <div className="products">

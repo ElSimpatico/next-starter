@@ -1,9 +1,16 @@
 import { PropsWithChildren } from "react";
 import { TranslationsFn } from "./Translations";
 
-export type Params = Record<string, unknown>;
+type Params = Record<string, string>;
 
 export interface CommonServerProps extends PropsWithChildren {
   params?: Promise<Params>;
   t?: TranslationsFn;
+}
+
+export interface CommonServerLayout extends PropsWithChildren {
+  params?: Promise<Params>;
+}
+export interface CommonServerPage {
+  params?: Promise<Params>;
 }

@@ -9,20 +9,25 @@ export default function LanguageNav() {
   const pathname = usePathname();
   const currentLocale = useLocale();
 
+  const localePattern = new RegExp(`^/(${LOCALES.join("|")})`);
+  const pathWithoutLocale = pathname.replace(localePattern, "") || "/";
+
   const t = useTranslations("Languages");
 
   return (
     <nav className="languages">
-      {LOCALES.map((locale) => (
-        <Link
-          className={`languages__link${locale === currentLocale ? " active" : ""}`}
-          key={locale}
-          href={pathname ?? "/"}
-          locale={locale}
-        >
-          {t(locale)}
-        </Link>
-      ))}
+      {LOCALES.map((locale) => {
+        return (
+          <Link
+            className={`languages__link${locale === currentLocale ? " active" : ""}`}
+            key={locale}
+            href={pathWithoutLocale}
+            locale={locale}
+          >
+            {t(locale)}
+          </Link>
+        );
+      })}
     </nav>
   );
 }

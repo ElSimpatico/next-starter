@@ -1,11 +1,13 @@
+import { use } from "react";
 import { getProduct } from "@/app/[locale]/products/_utils/fetch";
 import { fakeWaiter } from "@/lib/utils/fake";
 import { CommonServerProps } from "@/types/CommonProps";
 
-export async function ProductGallery({ params }: CommonServerProps) {
-  await fakeWaiter(2);
+export default function ProductGallery({ params }: CommonServerProps) {
+  use(fakeWaiter(2));
+  const { id } = use(params!);
 
-  const product = await getProduct(params!);
+  const product = use(getProduct(id));
 
   return (
     <div className="productDetail__images">

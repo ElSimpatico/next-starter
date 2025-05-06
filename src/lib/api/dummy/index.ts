@@ -12,7 +12,7 @@ class DummyAPI {
   }
 
   async getProducts(): Promise<DummyProductsResponse> {
-    return this.http.get(Endpoints.PRODUCTS, {});
+    return this.http.get(Endpoints.PRODUCTS, { next: { revalidate: 10 } });
   }
 
   async getProduct(id: string): Promise<DummySingleProductResponse> {

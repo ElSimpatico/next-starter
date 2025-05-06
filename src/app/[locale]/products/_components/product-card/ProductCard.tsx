@@ -4,7 +4,7 @@ import { Routes } from "@/constants/Routes";
 
 import { ProductCardProps } from "./ProductCardProps";
 
-export default async function ProductCard({
+export default function ProductCard({
   product,
   accessibleImage,
   accessibleName,

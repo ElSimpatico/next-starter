@@ -1,4 +1,4 @@
-import ProductListSkeleton from "./_components/product-list/ProductListSkeleton";
+import { ProductListSkeleton } from "@/app/[locale]/products/_components";
 
 export default function Loading() {
   return (
