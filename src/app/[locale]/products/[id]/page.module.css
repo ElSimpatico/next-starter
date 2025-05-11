@@ -1,0 +1,26 @@
+.productDetail {
+  display: grid;
+  grid-template:
+    "images" auto
+    "info" auto
+    "dimensions" auto / 1fr;
+  gap: 24px;
+}
+
+.productDetail__images {
+  grid-area: images;
+}
+.productDetail__info {
+  grid-area: info;
+}
+.productDetail__dimensions {
+  grid-area: dimensions;
+}
+
+@media (min-width: 768px) {
+  .productDetail {
+    grid-template:
+      "images info" auto
+      "images dimensions" auto / minmax(0, 0.4fr) minmax(0, 0.6fr);
+  }
+}

@@ -1,12 +1,21 @@
 {
   "Products": {
-    "title": "Product page",
+    "title": "{ total } Products",
     "detailLink": "See the product {product}",
     "detailImage": "Image of the product {product}"
   },
   "ProductDetail": {
     "title": "Product detail page",
-    "subtitle": "This is the product {product}"
+    "subtitle": "This is the product {product}",
+    "discount": "{ percentage }% off",
+    "category": "Category",
+    "brand": "Brand",
+    "stock": "Stock",
+    "availability": "Availability",
+    "dimensions": "Dimensions",
+    "width": "Width",
+    "height": "Height",
+    "depth": "Depth"
   },
   "Footer": {
     "author": "Developed by {name}"

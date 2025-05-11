@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
@@ -8,20 +7,15 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { CommonServerLayout } from "@/types/CommonProps";
 
-import styles from "./layout.module.css";
-import "./globals.css";
-
 import { LanguageNav } from "@/ui/components";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { PoppinsFont } from "@/ui/globals/fonts";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import styles from "./layout.module.css";
+
+import "@/ui/globals/base.css";
+import "@/ui/globals/reset.css";
+import "@/ui/globals/typography.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -43,24 +37,26 @@ export default async function RootLayout({
   const t = await getTranslations("Footer");
 
   return (
-    <html lang={locale as string}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${styles.layout}`}
-      >
+    <html lang={locale as string} className={PoppinsFont.variable}>
+      <body className={styles.layout}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <header className={styles.layout__header}>
-            <Image
-              src="/next.svg"
-              alt="Next.js logo"
-              width={180}
-              height={38}
-              priority
-            />
-            <LanguageNav />
+            <div className={styles.layout__headerContent}>
+              <Image
+                src="/next.svg"
+                alt="Next.js logo"
+                width={180}
+                height={38}
+                priority
+              />
+              <LanguageNav />
+            </div>
           </header>
           <main className={styles.layout__main}>{children}</main>
           <footer className={styles.layout__footer}>
-            <p>{t("author", { name: "Aarón Velasco López" })}</p>
+            <div className={styles.layout__footerContent}>
+              <p>{t("author", { name: "Aarón Velasco López" })}</p>
+            </div>
           </footer>
         </NextIntlClientProvider>
       </body>

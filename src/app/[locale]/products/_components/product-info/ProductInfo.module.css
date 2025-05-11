@@ -1,0 +1,29 @@
+.productInfo__paragraph {
+  margin: 1rem 0;
+}
+
+.productInfo strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.productInfo__section {
+  padding: 0 1rem;
+}
+
+.productInfo__price {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.productInfo__priceTrough {
+  text-decoration: line-through;
+  color: #7f8c8d;
+}
+
+.productInfo__discount {
+  background-color: #e74c3c;
+  color: white;
+  padding: 0.4rem 0.8rem;
+}

@@ -1,11 +1,11 @@
 import { getTranslations } from "next-intl/server";
 
-import { ProductCard } from "@/app/[locale]/products/_components";
-import { getProducts } from "@/app/[locale]/products/_utils";
+import { ProductCard } from "@routes/products/_components";
+import { getProducts } from "@routes/products/_utils";
 
 import { fakeWaiter } from "@/lib/utils/fake";
 
-// export const dynamic = "force-static";
+import styles from "./styles.module.css";
 
 export default async function Products() {
   const t = await getTranslations("Products");
@@ -14,9 +14,9 @@ export default async function Products() {
 
   return (
     <div>
-      <h1>{t("title")}</h1>
+      <h1>{t("title", { total: products.length })}</h1>
       {/* <span>{`fetched at ${new Date().toISOString()}`}</span> */}
-      <div className="products">
+      <div className={styles.products__list}>
         {products.map((product) => (
           <ProductCard
             key={`${product.id}`}
@@ -29,24 +29,3 @@ export default async function Products() {
     </div>
   );
 }
-
-// import { Suspense } from "react";
-// import { getTranslations } from "next-intl/server";
-// import {
-//   ProductList,
-//   ProductListSkeleton,
-// } from "@/app/[locale]/products/_components";
-
-// export default async function Products() {
-//   const t = await getTranslations("Products");
-
-//   return (
-//     <div>
-//       <h1>{t("title")}</h1>
-//       <span>{`fetched at ${new Date().toISOString()}`}</span>;
-//       <Suspense fallback={<ProductListSkeleton />}>
-//         <ProductList t={t} />
-//       </Suspense>
-//     </div>
-//   );
-// }

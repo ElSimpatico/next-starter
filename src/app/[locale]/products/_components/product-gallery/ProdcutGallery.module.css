@@ -1,0 +1,6 @@
+.productGallery {
+  display: flex;
+  justify-content: center;
+  background-color: #f0f4f8;
+  border-radius: 1.2rem;
+}

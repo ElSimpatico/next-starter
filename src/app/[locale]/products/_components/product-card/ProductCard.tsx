@@ -4,15 +4,17 @@ import { Routes } from "@/constants/Routes";
 
 import { ProductCardProps } from "./ProductCardProps";
 
+import styles from "./styles.module.css";
+
 export default function ProductCard({
   product,
   accessibleImage,
   accessibleName,
 }: ProductCardProps) {
   return (
-    <article className="products__card">
+    <article className={styles.productCard}>
       <img
-        className="products__cardImage"
+        className={styles.productCard__image}
         src={product.imageUrl}
         alt={accessibleImage}
       />

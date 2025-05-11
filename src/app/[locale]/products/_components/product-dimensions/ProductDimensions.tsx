@@ -1,20 +1,26 @@
 import { use } from "react";
-import { getProduct } from "@/app/[locale]/products/_utils/fetch";
-import { fakeWaiter } from "@/lib/utils/fake";
+import { getProduct } from "@routes/products/_utils";
 import { CommonServerProps } from "@/types/CommonProps";
 
-export default function ProductDimensions({ params }: CommonServerProps) {
-  use(fakeWaiter(1.5));
+import styles from "./ProductDimensions.module.css";
+
+export default function ProductDimensions({ params, t }: CommonServerProps) {
   const { id } = use(params!);
 
   const product = use(getProduct(id));
 
   return (
-    <div className="productDetail__dimensions">
-      <h2>Dimensions</h2>
-      <p>Width: {product?.dimensions.width} cm</p>
-      <p>Height: {product?.dimensions.height} cm</p>
-      <p>Depth: {product?.dimensions.depth} cm</p>
+    <div className={styles.productDimensions}>
+      <h2>{t!("dimensions")}</h2>
+      <p className={styles.productDimensions__paragraph}>
+        <strong>{t!("width")}: </strong> {product?.dimensions.width} cm
+      </p>
+      <p className={styles.productDimensions__paragraph}>
+        <strong>{t!("height")}: </strong> {product?.dimensions.height} cm
+      </p>
+      <p className={styles.productDimensions__paragraph}>
+        <strong>{t!("depth")}:</strong> {product?.dimensions.depth} cm
+      </p>
     </div>
   );
 }

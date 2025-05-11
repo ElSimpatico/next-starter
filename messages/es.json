@@ -1,12 +1,21 @@
 {
   "Products": {
-    "title": "Página de productos",
+    "title": "{ total } Productos",
     "detailLink": "Ver el producto {product}",
     "detailImage": "Imagen del product {product}"
   },
   "ProductDetail": {
     "title": "Página de detalle de producto",
-    "subtitle": "Este es el producto {product}"
+    "subtitle": "Este es el producto {product}",
+    "discount": "{ percentage }% descuento",
+    "category": "Categoría",
+    "brand": "Marca",
+    "stock": "Stock",
+    "availability": "Disponibildiad",
+    "dimensions": "Dimensiones",
+    "width": "Ancho",
+    "height": "Alto",
+    "depth": "Profundiad"
   },
   "Footer": {
     "author": "Desarrollado por {name}"
