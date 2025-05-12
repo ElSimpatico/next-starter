@@ -32,9 +32,9 @@ export default async function RootLayout({
     notFound();
   }
 
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
 
-  const t = await getTranslations("Footer");
+  const t = await getTranslations({ locale, namespace: "Footer" });
 
   return (
     <html lang={locale as string} className={PoppinsFont.variable}>

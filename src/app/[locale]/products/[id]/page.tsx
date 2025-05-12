@@ -8,10 +8,22 @@ import {
   ProductDimensions,
   ProductDimensionsSkeleton,
 } from "@routes/products/_components";
+
 import { CommonServerPage } from "@/types/CommonProps";
 import { Skeleton } from "@/ui/components";
 
 import styles from "./page.module.css";
+
+// export function generateStaticParams() {
+//   return [
+//     { locale: "es", id: "1" },
+//     { locale: "es", id: "2" },
+//     { locale: "es", id: "3" },
+//     { locale: "en", id: "1" },
+//     { locale: "en", id: "2" },
+//     { locale: "en", id: "3" },
+//   ];
+// }
 
 export default async function Product({ params }: CommonServerPage) {
   const { locale } = (await params) ?? {};

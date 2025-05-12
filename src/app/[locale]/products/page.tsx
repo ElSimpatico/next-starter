@@ -6,9 +6,11 @@ import { getProducts } from "@routes/products/_utils";
 import { fakeWaiter } from "@/lib/utils/fake";
 
 import styles from "./styles.module.css";
+import { CommonServerPage } from "@/types/CommonProps";
 
-export default async function Products() {
-  const t = await getTranslations("Products");
+export default async function Products({ params }: CommonServerPage) {
+  const { locale } = (await params) ?? {};
+  const t = await getTranslations({ locale, namespace: "Products" });
   await fakeWaiter(1);
   const products = await getProducts();
 
@@ -19,6 +21,7 @@ export default async function Products() {
       <div className={styles.products__list}>
         {products.map((product) => (
           <ProductCard
+            locale={locale}
             key={`${product.id}`}
             product={product}
             accessibleName={t("detailLink", { product: product.name })}
