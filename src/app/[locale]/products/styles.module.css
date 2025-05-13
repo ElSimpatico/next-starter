@@ -5,19 +5,19 @@
   gap: 2.4rem;
 }
 
-@media (min-width: 768px) {
+@media (--medium) {
   .products__list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 1024px) {
+@media (--large) {
   .products__list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (min-width: 1200px) {
+@media (--extra-large) {
   .products__list {
     grid-template-columns: repeat(4, 1fr);
   }
