@@ -5,7 +5,7 @@ import { CommonServerProps } from "@/types/CommonProps";
 
 import clsx from "clsx";
 
-import styles from "./ProductInfo.module.css";
+import styles from "./ProductInfo.module.scss";
 
 export default function ProductInfo({ params, t }: CommonServerProps) {
   use(fakeWaiter(1));

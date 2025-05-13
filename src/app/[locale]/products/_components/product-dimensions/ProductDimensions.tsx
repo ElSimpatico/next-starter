@@ -2,7 +2,7 @@ import { use } from "react";
 import { getProduct } from "@routes/products/_utils";
 import { CommonServerProps } from "@/types/CommonProps";
 
-import styles from "./ProductDimensions.module.css";
+import styles from "./ProductDimensions.module.scss";
 
 export default function ProductDimensions({ params, t }: CommonServerProps) {
   const { id } = use(params!);

@@ -1,0 +1,10 @@
+.productDimensions {
+  padding: 0 1rem;
+  &__paragraph {
+    margin: 1rem 0;
+  }
+  strong {
+    color: #2c3e50;
+    font-weight: 600;
+  }
+}

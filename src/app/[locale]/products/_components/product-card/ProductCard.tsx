@@ -4,7 +4,7 @@ import { Routes } from "@/constants/Routes";
 
 import { ProductCardProps } from "./ProductCardProps";
 
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 
 export default async function ProductCard({
   product,

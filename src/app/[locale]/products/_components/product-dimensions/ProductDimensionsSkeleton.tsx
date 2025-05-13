@@ -1,6 +1,6 @@
 import { Skeleton } from "@/ui/components";
 
-import styles from "./ProductDimensions.module.css";
+import styles from "./ProductDimensions.module.scss";
 
 export default function ProductDimensionsSkeleton() {
   return (

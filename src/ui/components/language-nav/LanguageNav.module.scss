@@ -1,0 +1,40 @@
+.languages {
+  display: flex;
+  position: relative;
+  &__link {
+    &:not(:last-child) {
+      margin: 0 1.6rem 0 0;
+    }
+    &:hover {
+      border-bottom: 0.1rem solid gray;
+    }
+    &IsActive {
+      border-bottom: 0.1rem solid black;
+    }
+  }
+  &__button {
+    display: flex;
+    padding: 0.8rem 1.6rem;
+    background-color: transparent;
+    border: 0.1rem solid black;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 0.2rem;
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.8rem;
+    padding: 0.8rem 1.6rem;
+    background-color: white;
+    border: 0.1rem solid black;
+    .languages__link:not(:last-child) {
+      margin: 0 0 1.6rem 0;
+    }
+  }
+}

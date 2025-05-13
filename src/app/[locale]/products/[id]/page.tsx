@@ -12,7 +12,7 @@ import {
 import { CommonServerPage } from "@/types/CommonProps";
 import { Skeleton } from "@/ui/components";
 
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 
 // export function generateStaticParams() {
 //   return [

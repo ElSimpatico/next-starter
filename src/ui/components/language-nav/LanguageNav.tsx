@@ -13,7 +13,7 @@ import clsx from "clsx";
 
 import { LanguageNavProps } from "./LanguageNavProps";
 
-import styles from "./LanguageNav.module.css";
+import styles from "./LanguageNav.module.scss";
 
 export default function LanguageNav({
   variant = "dropdown",

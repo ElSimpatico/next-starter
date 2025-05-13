@@ -1,3 +1,5 @@
+@use "mixins/breakpoints";
+
 .productDetail {
   display: grid;
   grid-template:
@@ -5,20 +7,17 @@
     "info" auto
     "dimensions" auto / 1fr;
   gap: 24px;
-}
+  &__images {
+    grid-area: images;
+  }
+  &__info {
+    grid-area: info;
+  }
+  &__dimensions {
+    grid-area: dimensions;
+  }
 
-.productDetail__images {
-  grid-area: images;
-}
-.productDetail__info {
-  grid-area: info;
-}
-.productDetail__dimensions {
-  grid-area: dimensions;
-}
-
-@media (min-width: 768px) {
-  .productDetail {
+  @include breakpoints.viewportM() {
     grid-template:
       "images info" auto
       "images dimensions" auto / minmax(0, 0.4fr) minmax(0, 0.6fr);

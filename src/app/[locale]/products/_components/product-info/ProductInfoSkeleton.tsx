@@ -1,6 +1,6 @@
 import { Skeleton } from "@/ui/components";
 
-import styles from "./ProductInfo.module.css";
+import styles from "./ProductInfo.module.scss";
 
 export default function ProductInfoSkeleton() {
   return (

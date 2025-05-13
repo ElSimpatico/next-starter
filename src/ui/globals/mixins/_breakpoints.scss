@@ -1,0 +1,29 @@
+@use "sass:map";
+@use "../abstracts/variables";
+
+@mixin _breakpoint($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin viewportS() {
+  @include _breakpoint(map.get(variables.$breakpoint, S)) {
+    @content;
+  }
+}
+@mixin viewportM() {
+  @include _breakpoint(map.get(variables.$breakpoint, M)) {
+    @content;
+  }
+}
+@mixin viewportL() {
+  @include _breakpoint(map.get(variables.$breakpoint, L)) {
+    @content;
+  }
+}
+@mixin viewportXL() {
+  @include _breakpoint(map.get(variables.$breakpoint, XL)) {
+    @content;
+  }
+}

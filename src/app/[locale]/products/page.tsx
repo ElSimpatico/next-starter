@@ -5,7 +5,7 @@ import { getProducts } from "@routes/products/_utils";
 
 import { fakeWaiter } from "@/lib/utils/fake";
 
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 import { CommonServerPage } from "@/types/CommonProps";
 
 export default async function Products({ params }: CommonServerPage) {

@@ -1,6 +1,6 @@
 import { Skeleton } from "@/ui/components";
 
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 
 export default function ProductCardSkeleton() {
   return (

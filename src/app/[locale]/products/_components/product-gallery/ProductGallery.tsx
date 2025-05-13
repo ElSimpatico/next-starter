@@ -3,7 +3,7 @@ import { getProduct } from "@routes/products/_utils/fetch";
 import { fakeWaiter } from "@/lib/utils/fake";
 import { CommonServerProps } from "@/types/CommonProps";
 
-import styles from "./ProdcutGallery.module.css";
+import styles from "./ProdcutGallery.module.scss";
 
 export default function ProductGallery({ params }: CommonServerProps) {
   use(fakeWaiter(2));

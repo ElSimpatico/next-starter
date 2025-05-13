@@ -1,0 +1,49 @@
+@use "mixins/breakpoints";
+
+.layout {
+  display: grid;
+  min-height: 100vh;
+  grid-template: "header" auto "main" 1fr "footer" auto / 1fr;
+
+  &__header {
+    padding-block: 2rem;
+    border-bottom: 0.1rem solid black;
+    grid-area: header;
+  }
+
+  &__headerContent {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 2.4rem;
+  }
+
+  &__main {
+    grid-area: main;
+    margin: 1.6rem 2.4rem;
+  }
+
+  &__footer {
+    padding-block: 2rem;
+    background-color: black;
+    color: white;
+    grid-area: footer;
+  }
+
+  &__footerContent {
+    display: flex;
+    margin-inline: 2.4rem;
+  }
+}
+
+@include breakpoints.viewportL() {
+  .layout {
+    &__headerContent,
+    &__main,
+    &__footerContent {
+      margin-inline: auto;
+      padding-inline: 2.4rem;
+      width: 100%;
+      max-width: 143.6rem;
+    }
+  }
+}

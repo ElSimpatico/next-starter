@@ -3,7 +3,7 @@ import { clsx } from "clsx";
 
 import { SkeletonProps } from "./SkeletonProps";
 
-import styles from "./Skeleton.module.css";
+import styles from "./Skeleton.module.scss";
 
 export default function Skeleton({
   width,

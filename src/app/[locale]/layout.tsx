@@ -11,11 +11,9 @@ import { LanguageNav } from "@/ui/components";
 
 import { PoppinsFont } from "@/ui/globals/fonts";
 
-import styles from "./layout.module.css";
+import "@/ui/globals/main.scss";
 
-import "@/ui/globals/base.css";
-import "@/ui/globals/reset.css";
-import "@/ui/globals/typography.css";
+import styles from "./layout.module.scss";
 
 export const metadata: Metadata = {
   title: "Create Next App",
