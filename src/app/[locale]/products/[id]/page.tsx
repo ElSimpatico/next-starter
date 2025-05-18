@@ -33,7 +33,15 @@ export default async function Product({ params }: CommonServerPage) {
   return (
     <div className={styles.productDetail}>
       <div className={styles.productDetail__images}>
-        <Suspense fallback={<Skeleton width={"100%"} height={"300px"} image />}>
+        <Suspense
+          fallback={
+            <Skeleton
+              width={"100%"}
+              className={styles.productDetail__imagesSkeleton}
+              image
+            />
+          }
+        >
           <ProductGallery params={params} />
         </Suspense>
       </div>

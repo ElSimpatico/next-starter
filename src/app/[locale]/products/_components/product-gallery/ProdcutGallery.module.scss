@@ -3,4 +3,11 @@
   justify-content: center;
   background-color: #f0f4f8;
   border-radius: 1.2rem;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+
+  &__image {
+    object-fit: cover;
+  }
 }

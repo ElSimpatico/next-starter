@@ -8,9 +8,13 @@
   box-shadow:
     0 0.1rem 0.3rem rgba(0, 0, 0, 0.1),
     0 0.4rem 0.6rem rgba(0, 0, 0, 0.05);
-  &__image {
+  &__imageWrapper {
+    position: relative;
     width: 100%;
-    height: auto;
+    height: 30rem;
     border-radius: 1.2rem;
+  }
+  &__image {
+    object-fit: cover;
   }
 }

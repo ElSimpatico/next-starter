@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { ProductCard } from "@routes/products/_components";
 import { getProducts } from "@routes/products/_utils";
 
-import { fakeWaiter } from "@/lib/utils/fake";
+// import { fakeWaiter } from "@/lib/utils/fake";
 
 import styles from "./styles.module.scss";
 import { CommonServerPage } from "@/types/CommonProps";
@@ -11,7 +11,7 @@ import { CommonServerPage } from "@/types/CommonProps";
 export default async function Products({ params }: CommonServerPage) {
   const { locale } = (await params) ?? {};
   const t = await getTranslations({ locale, namespace: "Products" });
-  await fakeWaiter(1);
+  // await fakeWaiter(1);
   const products = await getProducts();
 
   return (

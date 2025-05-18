@@ -1,6 +1,6 @@
 import { use } from "react";
 import { getProduct } from "@routes/products/_utils";
-import { fakeWaiter } from "@/lib/utils/fake";
+// import { fakeWaiter } from "@/lib/utils/fake";
 import { CommonServerProps } from "@/types/CommonProps";
 
 import clsx from "clsx";
@@ -8,7 +8,7 @@ import clsx from "clsx";
 import styles from "./ProductInfo.module.scss";
 
 export default function ProductInfo({ params, t }: CommonServerProps) {
-  use(fakeWaiter(1));
+  // use(fakeWaiter(1));
   const { id } = use(params!);
 
   const product = use(getProduct(id));

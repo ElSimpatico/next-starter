@@ -9,6 +9,9 @@
   gap: 24px;
   &__images {
     grid-area: images;
+    &Skeleton {
+      aspect-ratio: 1/1;
+    }
   }
   &__info {
     grid-area: info;
