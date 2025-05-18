@@ -1,8 +1,14 @@
 {
+  "Meta": {
+    "title": "Mi tienda online",
+    "description": "Explora nuestros productos y encuentra lo que necesitas"
+  },
   "Products": {
     "title": "{ total } Productos",
     "detailLink": "Ver el producto {product}",
-    "detailImage": "Imagen del product {product}"
+    "detailImage": "Imagen del product {product}",
+    "metaTitle": "Lista de productos",
+    "metaDescription": "Descrubre nuestra amplia variedad de productos disponibles"
   },
   "ProductDetail": {
     "title": "Página de detalle de producto",

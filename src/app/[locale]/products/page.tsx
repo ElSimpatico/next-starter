@@ -7,6 +7,19 @@ import { getProducts } from "@routes/products/_utils";
 
 import styles from "./styles.module.scss";
 import { CommonServerPage } from "@/types/CommonProps";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: CommonServerPage): Promise<Metadata> {
+  const { locale } = (await params) ?? {};
+  const t = await getTranslations({ locale, namespace: "Products" });
+
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+  };
+}
 
 export default async function Products({ params }: CommonServerPage) {
   const { locale } = (await params) ?? {};

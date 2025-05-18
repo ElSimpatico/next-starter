@@ -11,8 +11,10 @@ import {
 
 import { CommonServerPage } from "@/types/CommonProps";
 import { Skeleton } from "@/ui/components";
+import { getProduct } from "@routes/products/_utils";
 
 import styles from "./page.module.scss";
+import { Metadata } from "next";
 
 // export function generateStaticParams() {
 //   return [
@@ -24,6 +26,27 @@ import styles from "./page.module.scss";
 //     { locale: "en", id: "3" },
 //   ];
 // }
+
+export async function generateMetadata({
+  params,
+}: CommonServerPage): Promise<Metadata> {
+  const { id } = (await params) ?? {};
+
+  const product = await getProduct(id);
+
+  if (!product) return {};
+
+  return {
+    title: product.title,
+    description: product.description,
+    openGraph: {
+      type: "website",
+      title: product.title,
+      description: product.title,
+      images: product.images,
+    },
+  };
+}
 
 export default async function Product({ params }: CommonServerPage) {
   const { locale } = (await params) ?? {};
